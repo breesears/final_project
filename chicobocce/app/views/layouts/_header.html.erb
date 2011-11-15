@@ -1,8 +1,8 @@
     <div align="center"><img src="/images/header.gif" /></div>
-    <div class="navbar"><a href="#">EVENTS      </a>&nbsp &nbsp | &nbsp &nbsp
-                      <a href="#"> TEAMS        </a>&nbsp &nbsp | &nbsp &nbsp
+    <div class="navbar"><%= link_to("EVENTS", events_path) %>&nbsp &nbsp | &nbsp &nbsp
+                        <%= link_to("TEAMS", teams_path)   %>&nbsp &nbsp | &nbsp &nbsp
                       <a href="#"> CONTACT      </a>&nbsp &nbsp | &nbsp &nbsp
                       <a href="#"> LEAGUE STATS </a>&nbsp &nbsp | &nbsp &nbsp
-                      <a href="#"> HOME         </a> 
+                        <%= link_to("HOME", root_path)     %> 
     </div>
                                      
