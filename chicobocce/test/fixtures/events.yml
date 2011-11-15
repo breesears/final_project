@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  venue: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  date: 2011-11-13
+  starttime: 2011-11-13 09:12:07
+  endtime: 2011-11-13 09:12:07
+  description: MyText
+
+two:
+  name: MyString
+  venue: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  date: 2011-11-13
+  starttime: 2011-11-13 09:12:07
+  endtime: 2011-11-13 09:12:07
+  description: MyText
