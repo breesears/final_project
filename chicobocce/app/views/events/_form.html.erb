@@ -33,14 +33,14 @@
   </div>
   <div class="field">
     <%= f.label       :date %><br />
-    <%= f.date_select :date %>
+    <%= f.date_select(:date, :order => [:month, :day, :year]) %>
   </div>
   <div class="field">
-    <%= f.label       :starttime %><br />
-    <%= f.time_select :starttime %>
+    <%= f.label       "Start Time"  %><br />
+    <%= f.time_select(:starttime, :ampm => true, :twelve_hour => true) %>
   </div>
   <div class="field">
-    <%= f.label       :endtime %><br />
+    <%= f.label       "End Time" %><br />
     <%= f.time_select :endtime %>
   </div>
   <div class="field">

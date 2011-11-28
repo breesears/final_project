@@ -1,34 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @event.name %>
-</p>
-
-<p>
-  <b>Venue:</b>
-  <%= @event.venue %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @event.address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @event.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @event.state %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @event.date %>
-</p>
+<div>
+  <p id="redtext"><%= @event.name %></p>
+                  <%= @event.date %>
+  <p>Location:    <%= @event.venue %><br />
+                  <%= @event.address %><br />
+                  <%= @event.city %>, <%= @event.state %>
+  </p>
 
 <p>
   <b>Starttime:</b>

@@ -21,6 +21,19 @@ a {
   color:    #c2281c;
 }
 
+.header {
+  color:          #c2281c;
+  font-weight:    bold;
+  padding-bottom: 0px;
+  margin-bottom:  0px;
+  font-size:      14pt;
+}
+
+.edates {
+  padding-top: 0px;
+  margin-top:  0px;
+}
+
 div.navbar {
   background-color: #c2281c;
   color:            #ffffff;

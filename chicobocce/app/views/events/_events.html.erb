@@ -1,0 +1,8 @@
+<% @events.each do |event| %>
+  <div class="spacer">
+    <p class="header"><%= event.name %></p>
+    <p class="edates"><%= event.date %><br />
+       <%= event.starttime %> - <%= event.endtime %><br />
+       <%= event.venue %></p>
+  </div>
+<% end %>
