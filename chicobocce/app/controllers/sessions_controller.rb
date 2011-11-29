@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
-  before_filter :confirm_logged_in, :except => [:login, :create, :logout]
+  before_filter :confirm_logged_in, :except => [:new, :create, :logout]
 
+  def index
+    menu
+    render('menu')
+  end
+
+  def menu
+  end
+  
   def new
   end
 
@@ -14,7 +22,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       session[:username] = user.username
       flash[:notice] = "Logged in" 
-      redirect_to user 
+      redirect_to(:action => 'menu') 
     end
   end
 
