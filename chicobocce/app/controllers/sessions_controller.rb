@@ -12,25 +12,28 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def login
+  end
+
   def create
     user = User.authenticate(params[:session][:username],
-                                        params[:session][:password])
+                             params[:session][:password])
     if user.nil?
       flash.now[:error] = "Invalid username/password combination"
       render 'new'
     else
-      session[:user_id] = user.id
-      session[:username] = user.username
-      flash[:notice] = "Logged in" 
+      session[:user_id]   = user.id
+      session[:username]  = user.username
+      flash[:notice]      = "Logged in" 
       redirect_to(:action => 'menu') 
     end
   end
 
-  def logout
-    session[:user_id]  = nil
-    session[:username] = nil
-    flash[:notice] = "You have been logged out"
-    redirect_to(:action => "login")
+  def destroy
+    session[:user_id]   =  nil
+    session[:username]  =  nil
+    flash[:notice]      =  "You have been logged out"
+    redirect_to(:action => "new")
   end
  
  private 
@@ -44,8 +47,4 @@ class SessionsController < ApplicationController
       return true
     end
   end
- 
-  def destroy
-  end
-
 end

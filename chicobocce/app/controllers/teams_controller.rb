@@ -1,35 +1,17 @@
 class TeamsController < ApplicationController
   # GET /teams
-  # GET /teams.xml
   def index
     @teams = Team.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @teams }
-    end
   end
 
   # GET /teams/1
-  # GET /teams/1.xml
   def show
     @team = Team.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @team }
-    end
   end
 
   # GET /teams/new
-  # GET /teams/new.xml
   def new
     @team = Team.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @team }
-    end
   end
 
   # GET /teams/1/edit
@@ -38,17 +20,14 @@ class TeamsController < ApplicationController
   end
 
   # POST /teams
-  # POST /teams.xml
   def create
     @team = Team.new(params[:team])
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to(@team, :notice => 'Team was successfully created.') }
-        format.xml  { render :xml => @team, :status => :created, :location => @team }
+        format.html { redirect_to(teams_path, :notice => 'Team was successfully created.') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @team.errors, :status => :unprocessable_entity }
       end
     end
   end

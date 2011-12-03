@@ -1,9 +1,7 @@
-<h1>Listing teams</h1>
 
-<table>
+<table class="teams">
   <tr>
     <th>Name</th>
-    <th>Active</th>
     <th>Totalscore</th>
     <th></th>
     <th></th>
@@ -13,9 +11,7 @@
 <% @teams.each do |team| %>
   <tr>
     <td><%= team.name %></td>
-    <td><%= team.active %></td>
     <td><%= team.totalscore %></td>
-    <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -24,4 +20,3 @@
 
 <br />
 
-<%= link_to 'New Team', new_team_path %>

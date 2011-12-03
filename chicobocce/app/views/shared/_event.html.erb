@@ -1,0 +1,11 @@
+<% @events.each do |event| %>
+  <div class="spacer">
+    <p><%= event.name %><br />
+       <%= event.date.to_s(:customdate) %><br />
+       <%= event.starttime.to_s(:customtime)%> - <%= event.endtime.to_s(:customtime) %><br />
+       <%= event.venue %><br />
+    </p>  
+</div>
+<% end %>
+
+

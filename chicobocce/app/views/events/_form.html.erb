@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label       "Start Time"  %><br />
-    <%= f.time_select(:starttime, :ampm => true, :twelve_hour => true) %>
+    <%= f.time_select 'starttime', {:ampm => true} %>
   </div>
   <div class="field">
     <%= f.label       "End Time" %><br />
