@@ -3,7 +3,6 @@ class EventsController < ApplicationController
  
 
   # GET /events
-  # GET /events.xml
   def index
     @events = Event.all
 
@@ -15,7 +14,6 @@ class EventsController < ApplicationController
   # GET /events/1
   def show
     @event = Event.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
     end
@@ -24,10 +22,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-    end
+    addteamstoevent
   end
 
   # GET /events/1/edit
@@ -48,7 +43,8 @@ class EventsController < ApplicationController
     end
   end
 
-  # PUT /events/1
+  
+# PUT /events/1
   def update
     @event = Event.find(params[:id])
 
@@ -70,4 +66,14 @@ class EventsController < ApplicationController
       format.html { redirect_to(events_url) }
     end
   end
+
+  def addteamstoevent
+     Team.find_each do |team|
+       
+     end
+  end
+ 
+  def scores
+  end
+
 end

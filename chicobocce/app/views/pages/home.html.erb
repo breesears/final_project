@@ -1,5 +1,15 @@
-<div class="header">Upcoming Events</div>
-<%= render(:partial => 'shared/event', :collection => @events) %>
-
+<div style="clear:both">
 <p>The Chico Bocce League holds monthly tournaments at various locations around Chico.
-   If you are interested in signing up, please contact Bree Sears at info@chicobocce.com.</p>
+   If you are interested in signing up, please contact Bree Sears at info@chicobocce.com.
+</p>
+</div>
+
+<div class="header">Upcoming Events</div>
+<div class="left">
+  <%= render(:partial => 'shared/event', :collection => @events) %>
+</div>
+<div class="header">Top Teams</div>
+<div "right">
+  <%= render(:partial => 'shared/team', :collection => @teams) %>
+</div>
+

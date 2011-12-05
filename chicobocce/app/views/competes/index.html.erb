@@ -1,0 +1,27 @@
+<h1>Listing competes</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Team</th>
+    <th>Score</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @competes.each do |compete| %>
+  <tr>
+    <td><%= compete.event_id %></td>
+    <td><%= compete.team_id %></td>
+    <td><%= compete.score %></td>
+    <td><%= link_to 'Show', compete %></td>
+    <td><%= link_to 'Edit', edit_compete_path(compete) %></td>
+    <td><%= link_to 'Destroy', compete, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Compete', new_compete_path %>

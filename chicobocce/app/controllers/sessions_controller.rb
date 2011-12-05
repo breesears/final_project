@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
 
   def menu
   end
+
   
   def new
   end
@@ -41,7 +42,7 @@ class SessionsController < ApplicationController
   def confirm_logged_in
     unless session[:user_id]
       flash[:notice] = "You must be logged in to access this page"
-      redirect_to(:action => 'login')
+      redirect_to(:action => 'new')
       return false
     else
       return true

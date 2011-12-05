@@ -1,26 +1,15 @@
 <div>
-  <p id="redtext"><%= @event.name %></p>
-                  <%= @event.date %>
-  <p>Location:    <%= @event.venue %><br />
+  <p id="redtext" style="font-weight:bold"><%= @event.name %></p>
+  <p>             <%= @event.date.strftime("%B %d, %Y") %>   <br />
+                  <%= @event.starttime.to_s(:customtime) %> - <%= @event.endtime.to_s(:customtime) %> 
+  </p>
+  <p>             <%= @event.venue %><br />
                   <%= @event.address %><br />
                   <%= @event.city %>, <%= @event.state %>
   </p>
-
-<p>
-  <b>Starttime:</b>
-  <%= @event.starttime %>
-</p>
-
-<p>
-  <b>Endtime:</b>
-  <%= @event.endtime %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
+  <p>
+    <%= @event.description %>
+  </p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<p><%= link_to 'Edit', edit_event_path(@event) %> </p>

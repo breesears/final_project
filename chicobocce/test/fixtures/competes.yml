@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  event_id: 
+  team_id: 
+  score: 
+
+two:
+  event_id: 
+  team_id: 
+  score: 

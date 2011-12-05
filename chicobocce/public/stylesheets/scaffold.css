@@ -126,3 +126,14 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+div.left {
+  float:        left;
+  width:        50%;
+  padding-left: 30px;
+}
+
+div.right {
+  float: right;
+  width: 45%;
+}
