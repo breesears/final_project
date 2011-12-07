@@ -1,6 +1,6 @@
 <% @events.each do |event| %>
-  <div class="spacer">
-    <p><%= event.name %><br />
+  <div>
+    <p><%= link_to event.name, event %><br />
        <%= event.date.strftime("%B %d, %Y") %><br />
        <%= event.starttime.to_s(:customtime)%> - <%= event.endtime.to_s(:customtime) %><br />
        <%= event.venue %><br />

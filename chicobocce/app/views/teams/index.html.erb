@@ -12,8 +12,10 @@
   <tr>
     <td><%= team.name %></td>
     <td><%= team.totalscore %></td>
+    <% if !session[:user_id].nil? %> 
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Delete', team, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

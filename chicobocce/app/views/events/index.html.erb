@@ -11,4 +11,6 @@
   </div>
 <% end %>
 
-<p><%= link_to 'New Event', new_event_path %></p>
+<% if !session[:user_id].nil? %>
+  <p><%= link_to 'New Event', new_event_path %></p>
+<% end %>

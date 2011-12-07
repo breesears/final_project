@@ -26,5 +26,7 @@
 </div>
 
 <div style="clear:both">
-   <p><%= link_to 'Edit', edit_event_path(@event) %></p>
+<% if !session[:user_id].nil? %>
+   <p style="padding-left: 80px;"><%= link_to 'Edit', edit_event_path(@event) %></p>
+<% end %>
 </div>

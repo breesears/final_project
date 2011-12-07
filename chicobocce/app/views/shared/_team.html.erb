@@ -1,6 +1,11 @@
 <% @teams.each do |team| %>
-  <div class="spacer">
-    <p><%= team.name %> : <%= team.totalscore %></p>
+  <div>
+    <table width="60%">
+      <tr>
+        <td><%= team.name %> :</td>
+        <td class="teamhome"><%= team.totalscore %></td>
+      </tr>
+</table>
 </div>
 <% end %>
 

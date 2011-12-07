@@ -159,3 +159,8 @@ div.sright {
    width:         30%;
    padding-right: 60px;
 }
+
+
+td.teamhome {
+   text-align:  right;
+}

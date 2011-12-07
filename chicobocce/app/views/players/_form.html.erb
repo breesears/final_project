@@ -12,24 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label      "First Name" %><br />
-    <%= f.text_field :firstname %>
+    <%= f.label             "First Name" %><br />
+    <%= f.text_field        :firstname %>
   </div>
   <div class="field">
-    <%= f.label      "Last Name" %><br />
-    <%= f.text_field :lastname %>
+    <%= f.label             "Last Name" %><br />
+    <%= f.text_field        :lastname %>
   </div>
   <div class="field">
-    <%= f.label      :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label             :email %><br />
+    <%= f.text_field        :email %>
   </div>
   <div class="field">
-    <%  f.label      :team %><br />
+   Select a team:  
+   <%  f.label             "Select a team" %><br />
     <%= f.collection_select :team_id, Team.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.label             :phone %><br />
+    <%= f.text_field        :phone %>
   </div>
   <div class="actions">
     <%= f.submit %>
