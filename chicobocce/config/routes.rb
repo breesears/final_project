@@ -1,5 +1,8 @@
 Chicobocce::Application.routes.draw do
 
+
+  resources :players
+
   resources :competes
 
   resources :users

@@ -11,6 +11,11 @@ class SessionsController < ApplicationController
 
   
   def new
+     if session[:user_id].nil?
+       render 'new'
+     else
+       render 'menu'
+     end 
   end
 
   def login
@@ -37,15 +42,4 @@ class SessionsController < ApplicationController
     redirect_to(:action => "new")
   end
  
- private 
-
-  def confirm_logged_in
-    unless session[:user_id]
-      flash[:notice] = "You must be logged in to access this page"
-      redirect_to(:action => 'new')
-      return false
-    else
-      return true
-    end
-  end
 end

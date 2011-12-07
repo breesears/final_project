@@ -1,4 +1,11 @@
+
+<p>Logged in as: <% session[:username] %></p>
 <ul>
-  <li><%= link_to("Create an event", new_event_path) %></li>
+  <li><%= link_to("Create an event",       new_event_path)   %></li>
+  <li><%= link_to("Edit an event/score",   events_path) %></li>
+  <li><%= link_to("Create a team",         new_team_path)    %></li>
+  <li><%= link_to("Add a player",          new_player_path)  %></li>
+
+
   <li><%= link_to("Logout", :action => 'destroy') %></li>
 </ul> 

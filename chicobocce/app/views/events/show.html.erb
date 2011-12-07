@@ -1,4 +1,4 @@
-<div>
+<div class="left">
   <p id="redtext" style="font-weight:bold"><%= @event.name %></p>
   <p>             <%= @event.date.strftime("%B %d, %Y") %>   <br />
                   <%= @event.starttime.to_s(:customtime) %> - <%= @event.endtime.to_s(:customtime) %> 
@@ -10,6 +10,21 @@
   <p>
     <%= @event.description %>
   </p>
+</div>
 
+<div class="right" style="padding-top:20px;">
+  <table>
+    <% @event.competes.each do |compete| %>
+      <%= form_for(compete) do |f| %>
+       <tr>
+         <td> <%= compete.team.name %> :</td>
+         <td> <%= compete.score %> </td>
+       </tr>    
+      <% end %>
+    <% end %>
+  </table> 
+</div>
 
-<p><%= link_to 'Edit', edit_event_path(@event) %> </p>
+<div style="clear:both">
+   <p><%= link_to 'Edit', edit_event_path(@event) %></p>
+</div>

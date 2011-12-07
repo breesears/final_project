@@ -1,4 +1,6 @@
 class TeamsController < ApplicationController
+  before_filter :confirm_logged_in, :except => [:index]
+
   # GET /teams
   def index
     @teams = Team.all

@@ -4,12 +4,14 @@
 </p>
 </div>
 
-<div class="header">Upcoming Events</div>
+<div>
 <div class="left">
-  <%= render(:partial => 'shared/event', :collection => @events) %>
-</div>
-<div class="header">Top Teams</div>
-<div "right">
-  <%= render(:partial => 'shared/team', :collection => @teams) %>
+  <p class="header">Upcoming Events</p>
+  <p><%= render(:partial => 'shared/event', :collection => @events) %></p>
 </div>
 
+<div class="right">
+  <p class="header">Top Teams</p>
+  <p><%= render(:partial => 'shared/team', :collection => @teams) %></p>
+</div>
+</div>

@@ -1,4 +1,22 @@
+<div class="sleft">
+  <%= render 'form' %>
+</div>
 
-<%= render 'form' %>
+<div class="sright">
+  <p class="sheader">Add Scores</p>
+  <table>
+    <% @event.competes.each do |compete| %>
+      <%= form_for(compete) do |f| %>
+       <tr>
+         <td> <%= compete.team.name %> :                    </td>
+         <td> <%= f.text_field :score, :class => "score" %> </td>
+         <td> <%= f.submit "Update" %>                      </td>
+       </tr>    
+      <% end %>
+    <% end %>
+  </table> 
+</div>
 
-<p><%= link_to 'Back', events_path %></p>
+<div style="clear:both; padding-left: 150px;">
+  <%= link_to 'Back', events_path %> | <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %>  
+</div>
