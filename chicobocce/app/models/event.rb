@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
   has_many :teams
-  has_many :competes
+  has_many :competes, :dependent => :destroy
 end

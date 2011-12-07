@@ -10,7 +10,6 @@
     <p><%= event.description %></p>
   </div>
 <% end %>
-
 <% if !session[:user_id].nil? %>
   <p><%= link_to 'New Event', new_event_path %></p>
 <% end %>

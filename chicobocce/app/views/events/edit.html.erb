@@ -4,8 +4,8 @@
 
 <div class="sright">
   <p class="sheader">Add Scores</p>
-  <table>
-    <% @event.competes.each do |compete| %>
+<table>
+   <% @event.competes.each do |compete| %>
       <%= form_for(compete) do |f| %>
        <tr>
          <td> <%= compete.team.name %> :                    </td>
@@ -17,6 +17,6 @@
   </table> 
 </div>
 
-<div style="clear:both; padding-left: 150px;">
-  <%= link_to 'Back', events_path %> | <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %>  
+<div style="clear:both">
+ <p><%= link_to 'Back', events_path %> | <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %></p>  
 </div>

@@ -16,10 +16,12 @@
   <table>
     <% @event.competes.each do |compete| %>
       <%= form_for(compete) do |f| %>
-       <tr>
-         <td> <%= compete.team.name %> :</td>
-         <td> <%= compete.score %> </td>
-       </tr>    
+       <% if compete.score > 0 %>
+         <tr>
+           <td> <%= compete.team.name %> :</td>
+           <td> <%= compete.score %> </td>
+         </tr>    
+       <% end %>    
       <% end %>
     <% end %>
   </table> 
@@ -27,6 +29,9 @@
 
 <div style="clear:both">
 <% if !session[:user_id].nil? %>
-   <p style="padding-left: 80px;"><%= link_to 'Edit', edit_event_path(@event) %></p>
+   <p style="padding-left: 150px;">
+      <%= link_to 'Edit', edit_event_path(@event) %> |
+      <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %>
+  </p>
 <% end %>
 </div>

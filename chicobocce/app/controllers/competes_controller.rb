@@ -1,15 +1,9 @@
 class CompetesController < ApplicationController
-#  before_filter :set_event 
-#  before_filter :set_team
- 
+
   def new
-     @compete = @event.compete.new
   end
 
- 
-  def create
-    @compete = @event.competes.new(:score => params[:compete][:score], :event_id => @event.id)
-  end
+
 #    if @compete.save
 #      redirect_to(@event, :notice => 'Team was added')
 #    else
@@ -18,7 +12,12 @@ class CompetesController < ApplicationController
 #  end
 
    def update
-     @compete = @eventteam.competes.update(:event => event)
+     @compete = Compete.find(params[:id])
+     if @compete.update_attributes(params[:compete])
+        redirect_to(@compete.event, :notice => 'Score added')
+     end
+
+
    end
    
 
@@ -29,11 +28,8 @@ class CompetesController < ApplicationController
 #  end
 
   
-  def set_event
-    @event = Event.find(params[:event_id])
-  end
 
-  def set_team
-    @team = Team.find(params[:teamd_id])
-  end
+#  def set_team
+#    @team = Team.find(params[:team_id])
+#  end
 end
