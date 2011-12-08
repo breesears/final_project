@@ -5,16 +5,19 @@
   <%= @team.name %>
 </p>
 
-<p>
-  <b>Active:</b>
-  <%= @team.active %>
-</p>
+<% @team.competes.each do |compete| %>
+  
+<% end %>
+
 
 <p>
-  <b>Totalscore:</b>
+  <b>Total Score:</b>
   <%= @team.totalscore %>
 </p>
 
+<% if !session[:user_id].nil? %>
+  <p><%= link_to 'Edit', edit_team_path(@team) %> | 
+  <%= link_to 'Back', teams_path %></p>
+<% end %>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+

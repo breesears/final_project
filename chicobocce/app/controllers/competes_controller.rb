@@ -14,9 +14,9 @@ class CompetesController < ApplicationController
    def update
      @compete = Compete.find(params[:id])
      if @compete.update_attributes(params[:compete])
+        updatetotalscore(@compete)
         redirect_to(@compete.event, :notice => 'Score added')
      end
-
 
    end
    
@@ -29,7 +29,9 @@ class CompetesController < ApplicationController
 
   
 
-#  def set_team
-#    @team = Team.find(params[:team_id])
-#  end
+
+   def updatetotalscore(compete)
+      compete.team.totalscore += compete.score    
+   end
+
 end

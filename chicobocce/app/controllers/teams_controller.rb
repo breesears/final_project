@@ -35,30 +35,25 @@ class TeamsController < ApplicationController
   end
 
   # PUT /teams/1
-  # PUT /teams/1.xml
   def update
     @team = Team.find(params[:id])
-
+    
     respond_to do |format|
       if @team.update_attributes(params[:team])
-        format.html { redirect_to(@team, :notice => 'Team was successfully updated.') }
-        format.xml  { head :ok }
+         format.html { redirect_to(@team, :notice => 'Team was successfully updated.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @team.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # DELETE /teams/1
-  # DELETE /teams/1.xml
   def destroy
     @team = Team.find(params[:id])
     @team.destroy
 
     respond_to do |format|
       format.html { redirect_to(teams_url) }
-      format.xml  { head :ok }
     end
   end
 end

@@ -11,13 +11,16 @@
 <% @teams.each do |team| %>
   <tr>
    
-    <td><%= link_to_if(!session[:user_id].nil?, team.name) %></td>
+    <td><%= link_to_if(!session[:user_id].nil?, team.name, team) %></td>
     <td><%= team.totalscore %></td>
     <% if !session[:user_id].nil? %> 
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Delete', team, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
+<% end %>
+<% if !session[:user_id].nil? %>
+  <p><%= link_to 'Create an New Team', new_team_path %></p>
 <% end %>
 </table>
 
