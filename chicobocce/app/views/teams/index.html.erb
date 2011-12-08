@@ -2,7 +2,7 @@
 <table class="teams">
   <tr>
     <th>Name</th>
-    <th>Totalscore</th>
+    <th>Total Score</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
   <tr>
    
     <td><%= link_to(team.name, team) %></td>
-    <td><%= team.totalscore %></td>
+    <td><%= team.competes.sum(:score) %></td>
     <% if !session[:user_id].nil? %> 
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Delete', team, :confirm => 'Are you sure?', :method => :delete %></td>

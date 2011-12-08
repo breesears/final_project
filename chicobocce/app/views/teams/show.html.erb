@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p class="teamheader">
-  <%= @team.name %>
+  <%= @team.name %><br />
 </p>
+
 
 <p>
   <b>Players:</b>
@@ -13,9 +14,11 @@
 </p>
 
 <p>
-  <b>Total Score:</b>
-  <%= @team.totalscore %>
+  <b>Total Score<b>:
+  <%= @team.competes.sum(:score) %>
 </p>
+
+
 
 <% if !session[:user_id].nil? %>
   <p>
