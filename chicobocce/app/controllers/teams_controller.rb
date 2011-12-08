@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_filter :confirm_logged_in, :except => [:index]
+  before_filter :confirm_logged_in, :except => [:index, :show]
 
   # GET /teams
   def index

@@ -11,7 +11,7 @@
 <% @teams.each do |team| %>
   <tr>
    
-    <td><%= link_to_if(!session[:user_id].nil?, team.name, team) %></td>
+    <td><%= link_to(team.name, team) %></td>
     <td><%= team.totalscore %></td>
     <% if !session[:user_id].nil? %> 
     <td><%= link_to 'Edit', edit_team_path(team) %></td>

@@ -1,12 +1,9 @@
-<h1>Listing players</h1>
-
-<table>
+  <table class="players">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Email</th>
+    <th>Name</th>
     <th>Team</th>
     <th>Phone</th>
+    <th>Email</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,18 +11,18 @@
 
 <% @players.each do |player| %>
   <tr>
-    <td><%= player.firstname %></td>
-    <td><%= player.lastname %></td>
-    <td><%= player.email %></td>
-    <td><%= player.team_id %></td>
+    <td><%= player.full_name %></td>
+    <td><%= player.team.name %></td>
     <td><%= player.phone %></td>
-    <td><%= link_to 'Show', player %></td>
+    <td><%= player.email %></td>
+    <td><%= link_to 'View', player %></td>
     <td><%= link_to 'Edit', edit_player_path(player) %></td>
-    <td><%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', player, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<p>
 <%= link_to 'New Player', new_player_path %>
+</p>

@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<p class="teamheader">
   <%= @team.name %>
 </p>
 
-<% @team.competes.each do |compete| %>
-  
+<p>
+  <b>Players:</b>
+   <% @team.players.each do |player| %>
+   <p style="padding-left: 50px;">
+       <%= link_to_if(!session[:user_id].nil?, player.full_name, player) %><br /> 
 <% end %>
-
+</p>
 
 <p>
   <b>Total Score:</b>
