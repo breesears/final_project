@@ -18,8 +18,12 @@
 </p>
 
 <% if !session[:user_id].nil? %>
-  <p><%= link_to 'Edit', edit_team_path(@team) %> | 
-  <%= link_to 'Back', teams_path %></p>
+  <p>
+     <%= link_to 'Edit', edit_team_path(@team) %> | 
+     <%= link_to 'Back', teams_path %> |
+     <%= link_to 'Add a new player', new_player_path %>
+  </p>
+
 <% end %>
 
 

@@ -1,11 +1,10 @@
     <div align="center"><img src="/images/header.gif" /></div>
     <div class="navbar">
-      <%= link_to 'HOME',   {:controller => 'pages',    :action => 'home'}, :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
-      <%= link_to 'EVENTS', {:controller => 'events',   :action => 'index'}, :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
-      <%= link_to 'TEAMS',  {:controller => 'teams',    :action => 'index'}, :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
-                        <a href="#" class="nav"> CONTACT      </a>&nbsp &nbsp | &nbsp &nbsp
-                        <a href="#" class="nav"> LEAGUE STATS </a>&nbsp &nbsp | &nbsp &nbsp
-      <%= link_to 'ADMIN',  {:controller => 'sessions', :action => 'new'}, :class => 'nav' %> 
+      <%= link_to 'HOME',    {:controller => 'pages',    :action => 'home'},    :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
+      <%= link_to 'EVENTS',  {:controller => 'events',   :action => 'index'},   :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
+      <%= link_to 'TEAMS',   {:controller => 'teams',    :action => 'index'},   :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
+      <%= link_to 'CONTACT', {:controller => 'pages',    :action => 'contact'}, :class => 'nav' %>&nbsp &nbsp | &nbsp &nbsp
+      <%= link_to 'ADMIN',   {:controller => 'sessions', :action => 'new'},     :class => 'nav' %> 
                        
     </div>
                                      

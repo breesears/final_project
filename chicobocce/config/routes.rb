@@ -19,6 +19,7 @@ Chicobocce::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   match '/user',    :to => 'sessions#menu'
   match '/scores',  :to => 'events#scores'
+  match '/contact', :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

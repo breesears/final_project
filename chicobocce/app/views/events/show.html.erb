@@ -30,8 +30,9 @@
 <div style="clear:both">
 <% if !session[:user_id].nil? %>
    <p style="padding-left: 150px;">
-      <%= link_to 'Edit', edit_event_path(@event) %> |
-      <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Edit',               edit_event_path(@event) %> |
+      <%= link_to 'Delete',             @event, :confirm => 'Are you sure?', :method => :delete %> |
+      <%= link_to 'Create a new event', new_event_path %>
   </p>
 <% end %>
 </div>
