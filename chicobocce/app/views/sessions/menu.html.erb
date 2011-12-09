@@ -1,13 +1,28 @@
+<div class="spacer">
 
+<p><b>Events</b></p>
 <ul>
   <li><%= link_to("Create an event",              new_event_path)  %></li>
   <li><%= link_to("Edit/Delete an event",         events_path)     %></li>
   <li><%= link_to("Add/Edit a score",             events_path)     %></li>
+</ul>
+<br />
+<p><b>Teams</b></p>
+<ul>
   <li><%= link_to("Create a team",                new_team_path)   %></li>
   <li><%= link_to("Edit/Delete a team",           teams_path)      %></li>
+</ul>
+<br />
+<p><b>Players</b></p>
+<ul>
   <li><%= link_to("Add a new player",             new_player_path) %></li>
   <li><%= link_to("Edit/Delete a player",         players_path)    %></li>
-  <li><%= link_to("Create a new admin",           new_user_path)  %></li>
-  <li><%= link_to("Edit/Delete an admin",         users_path)     %></li>
-  <li><%= link_to("Logout", :action => 'destroy') %></li>
+  <li><%= link_to("View all players",             players_path)    %></li>
+</ul>
+<br />
+<p><b>Admins</b></p>
+<ul>
+  <li><%= link_to("Create a new admin",           new_user_path)   %></li>
+  <li><%= link_to("Edit/Delete an admin",         users_path)      %></li>
+  <li><%= link_to("Logout", :action => 'destroy')                  %></li>
 </ul> 
